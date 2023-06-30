@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+    <head>
+      <!--Acentos y caracteres especiales-->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <!--Cross-device layout-->
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE-edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DESPACHO SM</title>
+      <link rel="stylesheet" href="style.css">
+      <!--Icon-->
+      <link rel="shortcut icon" href="./src/assets/Logo_sm.png">
+
+      <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+      />
+
+      <!--Links a familias de fuentes-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;800&family=Playfair+Display&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Playfair+Display&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Cardo&family=Poppins&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Poppins&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Cardo&family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <section class="sub-header" id="cita">
+        <!--Navbar-->
+        <nav id="navbar">
+            <a href="index.html" rel="noopener noreferrer"><img src="./src/assets/Logo_sm.png" id="logo-nav"></a>
+            <div class="nav-links" id="navLinks">
+                <img class="menu" src="./src/assets/close.png" id="close-menu">
+                <ul id="menu">
+                    <li><a href="index.html" rel="noopener noreferrer">INICIO</a></li>
+                    <li><a href="conocenos.html" rel="noopener noreferrer">CONÓCENOS</a></li>
+                    <li><a href="servicios.html" rel="noopener noreferrer">SERVICIOS</a></li>
+                    <li><a href="citas.html" rel="noopener noreferrer">CITAS</a></li>
+                </ul>
+            </div>
+            <img class="menu" src="./src/assets/menu.png" id="open-menu">
+        </nav>
+        
+        <!--Inicio-->
+        <div class="sub-text-box">
+            <h1>CITAS</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit ut.</p>
+        </div>
+      </section>
+
+        
+        <!--Calendario-->
+        <section class="calendario">
+          <div class="container-calendar">
+              <div class="left">
+                <div class="calendar">
+                  <div class="month">
+                    <i class="fas fa-angle-left prev"></i>
+                    <div class="date">diciembre 2015</div>
+                    <i class="fas fa-angle-right next"></i>
+                  </div>
+                  <div class="weekdays">
+                    <div>Dom</div>
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mie</div>
+                    <div>Jue</div>
+                    <div>Vie</div>
+                    <div>Sab</div>
+                  </div>
+                  <div class="days"></div>
+                  <div class="goto-today">
+                    <div class="goto">
+                      <input type="text" placeholder="mm/aaaa" class="date-input" />
+                      <button class="goto-btn">Ir</button>
+                    </div>
+                    <button class="today-btn">Hoy</button>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="today-date">
+                  <div class="event-day">Mie</div>
+                  <div class="event-date">12 diciembre 2022</div>
+                </div>
+                <div class="events"></div>
+                
+                <div class="cita-space">
+                  <form name="citas" id="citas" onsubmit="getData()">
+                    <div class="header-form">
+                      <div class="form-title">Agenda tu cita</div>
+                      <i class="fas fa-times close"></i>
+                    </div>
+                    <div class="form-body">
+                      <p>Nombre completo:</p>
+                      <input class="form-name" type="text" placeholder="María Sánchez González" name="name" id="name" required>
+                      <p>Uno o dos números de teléfono:</p>
+                      <input class="numberOne" type="tel" placeholder="+52 55 1234 5678" name="numberOne" id="numberOne" required>
+                      <input class="numberTwo" name="numberTwo" id="numberTwo" type="tel" placeholder="+52 55 1234 5678">
+                      <p>Uno o dos emails:</p>
+                      <input class="emailOne" name="emailOne" id="emailOne" type="email" placeholder="miemail@hotmail.com" required>
+                      <input class="emailTwo" name="emailTwo" id="emailTwo" type="email" placeholder="miemail@hotmail.com">
+                      <p>Selecciona el asunto de la cita:</p>
+                      <label class="asunto" for="asunto"></label>
+                      <select name="asunto" id="asunto" required>
+                        <option value="asunto1">Asunto1</option>
+                        <option value="asunto2">Asunto2</option>
+                        <option value="asunto3">Asunto3</option>
+                      </select>
+                      <p>Explica brevemente tu caso:</p>
+                      <input class="text-explain" size="40%"  type="text" maxlength="280" name="explain" id="explain">
+
+                      <div class="footer-form">
+                        <button type="submit" name="submit" id="submit"  class="submit-button">Agendar</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </section>
+
+       <!--Mapa y formulario-->
+       <section class="location-form">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.7954417298356!2d-99.23134438505649!3d19.59326248679326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21db668855ad3%3A0xee1a52e08e9baf1!2sTecnol%C3%B3gico%20de%20Monterrey%20Estado%20de%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1674343400639!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+      <!--JS de los pinches imports
+      <script type="module">
+        import * as load from './load.js';
+        import swal from 'sweetalert';
+      </script>-->
+
+      <!--JS para la barra de Manú
+      <script type="application/javascript" src="script_navbar.js"></script> -->
+
+      <!--JS para calendario-->
+      <!--<script type="application/javascript" src="script_calendario.js"></script>        
+      <script type="module" src="index.js"></script>-->        
+      <script src="script_calendario.js"></script>        
+      <script src="index.js"></script> 
+
+      <!--Pie de página-->
+      <footer>
+        <hr>
+        <div class="row-footer">
+            <div class="col-footer" id="logo-col">
+                <img src="./src/assets/Logo_sm.png" alt="SM" id="logo-footer">
+            </div>
+            <div class="col-footer">
+                <h3>¿TIENES ALGUNA DUDA?</h3>
+                <div class="contact-col">
+                    <form action="form_handler.php" method="post" class="footer-contact">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <input type="text" name="asunto" placeholder="Asunto" required>
+                        <textarea rows="2" name="message" placeholder="Descripción" required></textarea>  
+                        <button type="submit" class="submit">Enviar ></button>
+                    </form>    
+                </div>               
+            </div>
+            <div class="col-footer">
+                <h3 id="contact">CONTÁCTANOS</h3>
+                <div class="row-c">
+                    <div class="col-c">
+                        <img src="./src/assets/pasador-de-ubicacion.png">
+                    </div>
+                    <div class="col-c">
+                        <p>Carrer Luis, 40, Bajo 2º, Polanco del Mirador</p>
+                    </div>
+                </div>
+                <div class="row-c">
+                    <div class="col-c">
+                        <img src="./src/assets/llamada-telefonica.png">
+                    </div>
+                    <div class="col-c">
+                        <p>+52 55 1234 5678</p>
+                    </div>
+                </div>
+                <div class="row-c">
+                    <div class="col-c">
+                        <img src="./src/assets/email.png">
+                    </div>
+                    <div class="col-c">
+                        <p>info@hotmail.com</p>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-links2" id="navLinks2">
+                    <ul id="menu2">
+                        <li><a href="index.html" rel="noopener noreferrer">INICIO</a></li>
+                        <li><a href="conocenos.html" rel="noopener noreferrer">CONÓCENOS</a></li>
+                        <li><a href="servicios.html" rel="noopener noreferrer">SERVICIOS</a></li>
+                        <li><a href="citas.html" rel="noopener noreferrer">CITAS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">DESPACHO SM 2023 - Todos los derechos reservados</p>
+    </footer>
+    </body>
+</html>
